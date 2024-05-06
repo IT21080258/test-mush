@@ -75,9 +75,11 @@ export default function appDrawer({children}){
         >
             
             <div style={{
-                padding:'10px 10px 2px'
+                padding:'10px 10px 2px',
+                alignItems: 'center',
+                justifyContent: 'center'
             }}>
-                <Typography variant="h5">
+                <Typography variant="h5" style={{alignItems: 'center'}}>
                     MushroomMatrix
                 </Typography>
             </div>
