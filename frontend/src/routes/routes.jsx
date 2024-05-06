@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter , Route , Routes } from 'react-router-dom';
 
-import appDrawer from '../pages/dashboard/dashboard'
+import Dashboard from '../pages/dashboard/dashboard'
 
 export default function routes({children}){
 return(
@@ -10,8 +10,8 @@ return(
     <Routes>
 
       <Route 
-      path='/dasboard' 
-      element = {<appDrawer/>}
+      path='/dashboard' 
+      element = {<Dashboard/>}
       />      
 
     </Routes>

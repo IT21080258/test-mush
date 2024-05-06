@@ -1,13 +1,13 @@
 import './App.css';
-import appDrawer from './components/sidebar/appdrawer'
-import routes from './routes/routes'
+import AppDrawer from './components/sidebar/appdrawer'
+import Routes from './routes/routes'
 
 
-function App() {
+function App(){
   return (
-    <appDrawer>
-      <routes/>
-    </appDrawer>
+    <AppDrawer>
+      <Routes style={{display:'flex'}}/>
+    </AppDrawer>
   );
 }
 

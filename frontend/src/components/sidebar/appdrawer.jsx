@@ -5,10 +5,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+// import { useHistory } from 'react-router-dom';
 
-
+const drawerWidth = 240
 
 export default function appDrawer({children}){
+
+    // const history = useHistory();
 
     const menuItems = [
         { 
@@ -53,23 +56,30 @@ export default function appDrawer({children}){
         },
       ];
 
+    //   const handleMenuItemClick = (path) => {
+    //     history.push(path);
+    // };
+
     return(
+        
+        <div >
         <Drawer 
         variant="permanent"
-        anchor="left">
+        anchor="left"
+        style={{ width: drawerWidth }}
+        >
             
             <div>
                 <Typography variant="h5">
                     MushroomMatrix
                 </Typography>
             </div>
-
             <List>
                 {menuItems.map((item) => (
                 <ListItem 
                     button 
                     key={item.text} 
-                    // onClick={() => history.push(item.path)}
+                    // onClick={() => useh(item.path)}
                     // className={location.pathname == item.path ? classes.active : null}
                 >
                     <ListItemIcon>{item.icon}</ListItemIcon>
@@ -77,8 +87,16 @@ export default function appDrawer({children}){
                 </ListItem>
           ))}
         </List>
-
         </Drawer>
+        
+        <div>
+            
+            {children}
+            
+        </div>
+        </div>
+        
+        
     )        
     
 }
