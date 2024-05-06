@@ -5,22 +5,23 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-// import { useHistory } from 'react-router-dom';
+import Grid from '@mui/material/Unstable_Grid2';
+// import { Link } from 'react-router-dom';
 
 const drawerWidth = 240
 
 export default function appDrawer({children}){
 
-    // const history = useHistory();
+    // const History  = ()=> useNavigate();
 
     const menuItems = [
         { 
           text: 'Dashboard', 
-          path: '/' 
+          path: '/dashboard' 
         },
         { 
           text: 'Add Users', 
-          th: '/user/adduser' 
+          path: '/user/adduser' 
         },
         { 
             text: 'List Users', 
@@ -62,14 +63,20 @@ export default function appDrawer({children}){
 
     return(
         
-        <div >
+        <Grid container spacing={2}>
+        <Grid>   
         <Drawer 
         variant="permanent"
         anchor="left"
-        style={{ width: drawerWidth }}
+        style={{ 
+            width: drawerWidth,
+            display: 'flex'
+         }}
         >
             
-            <div>
+            <div style={{
+                padding:'10px 10px 2px'
+            }}>
                 <Typography variant="h5">
                     MushroomMatrix
                 </Typography>
@@ -79,22 +86,23 @@ export default function appDrawer({children}){
                 <ListItem 
                     button 
                     key={item.text} 
-                    // onClick={() => useh(item.path)}
+                    // onClick={() => Link}
                     // className={location.pathname == item.path ? classes.active : null}
                 >
                     <ListItemIcon>{item.icon}</ListItemIcon>
+                    <a href={item.path}>
                     <ListItemText primary={item.text} />
+                    </a>
                 </ListItem>
           ))}
         </List>
         </Drawer>
+        </Grid> 
         
-        <div>
-            
-            {children}
-            
-        </div>
-        </div>
+        <Grid>            
+            {children}            
+        </Grid>
+        </Grid>
         
         
     )        
