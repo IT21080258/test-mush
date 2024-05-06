@@ -1,11 +1,11 @@
 import React from 'react';
-import Drawer from '@material-ui/core/Drawer';
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import { AddCircleOutlineOutlined} from '@material-ui/icons';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
+
 
 
 export default function appDrawer({children}){
@@ -13,52 +13,42 @@ export default function appDrawer({children}){
     const menuItems = [
         { 
           text: 'Dashboard', 
-          icon: <SubjectOutlined color="secondary" />, 
           path: '/' 
         },
         { 
           text: 'Add Users', 
-          icon: <AddCircleOutlineOutlined color="secondary" />, 
-          path: '/user/adduser' 
+          th: '/user/adduser' 
         },
         { 
             text: 'List Users', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/user/listuser' 
         },
         { 
             text: 'Add Growshed', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/grow/addgrowshed' 
         },
         { 
             text: 'Manage Growsheds', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/grow/growsheds' 
         },
         { 
             text: 'Add Racks', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/grow/addrack' 
         },
         { 
             text: 'Manage Racks', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/grow/racks' 
         },
         { 
             text: 'Bincards', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/grow/bincard' 
         },
         { 
             text: 'Contamination', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/grow/contamination' 
         },
         { 
             text: 'Demand', 
-            icon: <AddCircleOutlineOutlined color="secondary" />, 
             path: '/supply/demand' 
         },
       ];
@@ -66,7 +56,6 @@ export default function appDrawer({children}){
     return(
         <Drawer 
         variant="permanent"
-        classes={{ paper: classes.drawerPaper }}
         anchor="left">
             
             <div>
