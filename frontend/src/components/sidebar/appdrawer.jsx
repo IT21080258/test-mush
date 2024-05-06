@@ -17,11 +17,11 @@ export default function appDrawer({children}){
     const menuItems = [
         { 
           text: 'Dashboard', 
-          path: '/' 
+          path: '/dashboard' 
         },
         { 
           text: 'Add Users', 
-          th: '/user/adduser' 
+          path: '/user/adduser' 
         },
         { 
             text: 'List Users', 
@@ -90,17 +90,17 @@ export default function appDrawer({children}){
                     // className={location.pathname == item.path ? classes.active : null}
                 >
                     <ListItemIcon>{item.icon}</ListItemIcon>
+                    <a href={item.path}>
                     <ListItemText primary={item.text} />
+                    </a>
                 </ListItem>
           ))}
         </List>
         </Drawer>
         </Grid> 
         
-        <Grid>
-            
-            {children}
-            
+        <Grid>            
+            {children}            
         </Grid>
         </Grid>
         
