@@ -52,6 +52,10 @@ export default function appDrawer({children}){
             path: '/grow/contamination' 
         },
         { 
+            text: 'Yield', 
+            path: '/grow/yield' 
+        },
+        { 
             text: 'Demand', 
             path: '/supply/demand' 
         },

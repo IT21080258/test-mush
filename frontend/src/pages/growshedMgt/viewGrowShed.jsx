@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-export default function routes() {
+const ViewGrowShed = () =>  {
 
     function createData(code, condition, enviorenment, racks) {
         return { code, condition, enviorenment, racks };
@@ -28,7 +28,8 @@ return(
         <div>
             <Typography variant="h3">
                 Growsheds
-            </Typography>
+            </Typography><br/>
+            <hr/>
         </div>
         <div>
             <>
@@ -64,3 +65,5 @@ return(
     </Grid>
 )
 }
+
+export default ViewGrowShed;
