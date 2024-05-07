@@ -73,7 +73,7 @@ return(
             />
             <label htmlFor="contained-button-file">
                 <Button variant="contained" component="span" style={{Margin:'30px 0px 0px', width: '400px'}}>
-+                   Add Image
+                   Add Image
                 </Button>
             </label>
             <Button variant="contained" style={{Margin:'30px 0px 0px',

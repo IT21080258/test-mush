@@ -8,10 +8,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import FormControl from "@mui/material";
-import InputLabel from "@mui/material";
-import Select from "@mui/material";
-import Button from "@mui/material";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 
 const PredictYield = () =>  {
@@ -35,14 +36,89 @@ return(
             <hr/>
         </div>
         <div>
-            <form>
-                
+            <form style={{width:'400px'}}>
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="Growshed Code" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            />
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="Date" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            /><br/>
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="Tempreture Inside" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            />
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="CO2 Inside" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            />
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="Humidity Inside" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            /><br/>
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="Tempreture Outside" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            />
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="CO2 Outside" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            />
+            <TextField 
+                // onChange={(e) => setCode(e.target.value)}
+                label="Humidity Outside" 
+                variant="outlined" 
+                color="secondary" 
+                fullWidth
+                required
+                style={{margin: '8px 0px 0px', width:'200px'}}
+            />
+            <Button variant="contained" style={{Margin:'30px 0px 0px',
+                                                width: '400px'                        
+                                                                        }}>
+            Submit
+            </Button>
+
             </form>
-        </div>
-        <div>
-            <>
-            </>
-        </div>
+        </div><br/>
+        <hr/>
+        
         <Grid xs={12}>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table" style={{width:'100%'}}>
