@@ -14,18 +14,21 @@ import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 
+import axios from "axios";
 
 const PredictYield = () =>  {
 
-    function createData(Date, growShed, tempIn, co2In, humidIn, tempOut, Co2Out, humidOut, Yield) {
-        return {Date, growShed, tempIn, co2In, humidIn, tempOut, Co2Out, humidOut, Yield};
-      }
-      const rows = [
-        createData('2024/05/05','GH1','32', '123', '135', '32', '123', '135', 500),
-        createData('2024/05/05','GH1','32', '123', '135', '32', '123', '135', 500),
-        createData('2024/05/05','GH2','32', '123', '135', '32', '123', '135', 500),
-        
-      ];
+    const [formData, setFormData] = useState({
+        Noofpots: "",
+        TempInside: "",
+        HumidInside: "",
+        CO2Inside: "",
+        TempOutside: "",
+        HumidOutside: "",
+        CO2Outside: ""
+      });
+
+    
     
 return(
     <Grid>
